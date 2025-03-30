@@ -1,8 +1,21 @@
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MintTicket from './components/MintTicket';
+import TicketDetails from './components/TicketDetails';
+import { ethers } from 'ethers';
 
-  return (<h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>)
-}
+const App = () => {
+  return (
+    <div>
+      <MintTicket />
+    </div>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/" element={<MintTicket />} />
+    //     <Route path="/ticket" element={<TicketDetails />} />
+    //   </Routes>
+    // </Router>
+  );
+};
 
-export default App
+export default App;
