@@ -1,20 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MintTicket from './components/MintTicket';
-import TicketDetails from './components/TicketDetails';
-import { ethers } from 'ethers';
+import Header from './layout/Header';
+import { Provider } from 'react-redux';
+import store  from './store';
 
 const App = () => {
   return (
     <div>
-      <MintTicket />
+      <Provider store={store}>
+        <Header></Header>
+      </Provider>
     </div>
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<MintTicket />} />
-    //     <Route path="/ticket" element={<TicketDetails />} />
-    //   </Routes>
-    // </Router>
   );
 };
 
